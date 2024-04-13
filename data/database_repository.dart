@@ -1,8 +1,19 @@
+import '../domain/classes/connection.dart';
 import '../domain/classes/wallet.dart';
 
 abstract class DatabaseRepository {
-  // Get user Wallets
-  List<Wallet> getWallets(String userID);
+  // Attach Wallet
+  void attachWallet(Wallet userWallat);
 
-  // Get user Connections
+  // Get user Wallets
+  List<Wallet>? getUserWallets();
+
+  // Get wallet Connections
+  List<Connection>? getWalletConnections();
+
+  // Wallet Attributes change
+  void walletCityChange(String newCity);
+
+  // WalletID
+  String? getWalletID();
 }

@@ -4,16 +4,12 @@ class User {
   String userID;
   String password;
   String email;
-  List<Wallet> wallets;
+  Wallet? wallet;
 
   User({
     required this.userID,
     required this.password,
     required this.email,
-    required this.wallets,
+    required this.wallet,
   });
-
-  List<Wallet> getWallets(String userID) {
-    return wallets;
-  }
 }

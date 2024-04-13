@@ -1,28 +1,31 @@
 import '../enums/body_type.dart';
 import '../enums/countries.dart';
 import '../enums/gender.dart';
+import 'connection.dart';
 import 'user.dart';
 
 class Wallet {
-  List<User> users;
-  String firstName;
-  String lastName;
-  String walletID;
-  String photoUrl;
-  Gender gender;
-  Country country;
-  String city;
-  DateTime dateOfBirth;
-  num bodyWeight;
-  num bodyHeight;
-  BodyType bodyType;
-  bool hasDiabetes;
-  bool hasHypertension;
-  bool hasAlzheimer;
-  String qrCode;
+  User user;
+  List<Connection>? connections;
+  String? firstName;
+  String? lastName;
+  final String? walletID;
+  String? photoUrl;
+  Gender? gender;
+  Country? country;
+  String? city;
+  DateTime? dateOfBirth;
+  num? bodyWeight;
+  num? bodyHeight;
+  BodyType? bodyType;
+  bool? hasDiabetes;
+  bool? hasHypertension;
+  bool? hasAlzheimer;
+  String? qrCode;
 
   Wallet({
-    required this.users,
+    required this.user,
+    required this.connections,
     required this.walletID,
     required this.photoUrl,
     required this.gender,
